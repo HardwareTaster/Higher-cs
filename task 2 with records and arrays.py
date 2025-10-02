@@ -14,7 +14,7 @@ class person():
     weight : float = 0.0
     bmi : float = 0.0
 
-BMIdetails = [person() for index in range(40)] # DECLARE BMIDetails(40) AS PERSON
+BMIdetails = [person() for index in range(40)] 
 for index in range(4):
     enter_information(index)
     
@@ -22,3 +22,4 @@ print(BMIdetails[0])
 print(BMIdetails[1])
 print(BMIdetails[2])
 print(BMIdetails[3])
+
