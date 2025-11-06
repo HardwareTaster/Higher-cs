@@ -9,5 +9,6 @@ with open("file handlers/pupils.txt") as readfile:
         names.append(items[0])
         marks.append(items[1])
         line = readfile.readline().rstrip('\n')
-for i in range(len(names)):
+for i in range(0,len(names)):
+
     print(names[i],"-",marks[i])
