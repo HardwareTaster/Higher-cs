@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <style>
+    p{
+        display:none;
+        
+    }
+</style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>java task4 image hiding</title>
+
+        <script>
+
+    function showapple() {
+      document.getElementById("apple").style.display= "inline";
+      document.getElementById("banana").style.display= "none";
+    }
+    function showbanana() {
+      document.getElementById("apple").style.display= "none";
+      document.getElementById("banana").style.display= "inline";
+    }
+      
+    </script>
+
+  </head>
+
+  <body>
+    <img
+        class="button"
+        src="C:\Users\antin\OneDrive\Documents\html\file handlers\apple.png.jpg"
+        onclick="showapple()"
+        />
+    <p id="apple">This is an apple</p>
+
+    <img
+        class="button"
+        src="C:\Users\antin\OneDrive\Documents\html\file handlers\banana.png.jpg"
+        onclick="showbanana()"
+        />
+    <p id = "banana">This is a banana</p>
+
+
+  </body>
+</html>

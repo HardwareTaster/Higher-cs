@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .letter{
+      display:inline;
+      font-size: 60pt
+    }
+
+  </style>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>task 3 javascript</title>
+    <script>
+    function mouseOver(why) {
+      why.style.color = "red";
+    }
+
+    function mouseOut(why) {
+      why.style.color = "black";
+    }
+
+    function mouseclick(why) {
+      why.style.color = "green";
+    }
+      
+    </script>
+
+
+  </head>
+
+  <body>
+    <p1 class = "letter"  onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseclick(this)"> A</p1>
+    <p2 class = "letter"  onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseclick(this)"> n</p2>
+    <p3 class = "letter"  onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseclick(this)"> t</p3>
+    <p4 class = "letter"  onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseclick(this)"> o</p4>
+    <p5 class = "letter"  onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseclick(this)"> n</p5>
+  </body>
+</html>
