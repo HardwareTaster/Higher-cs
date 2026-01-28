@@ -2,7 +2,7 @@
 from dataclasses import dataclass
 @dataclass
 class person():
-    orderNum:int = 0
+    orderNum:str = ""
     date:str = ""
     email:str = ""
     option:str = ""
@@ -22,7 +22,7 @@ def readfromfile():
             orders[counter].email = (items[2])
             orders[counter].option = (items[3])
             orders[counter].cost = (items[4])
-            orders[counter].rating= (items[5])
+            orders[counter].rating= int(items[5])
             counter += 1
             line = readfile.readline().rstrip('\n')
     return orders
@@ -30,14 +30,36 @@ def readfromfile():
 def findpos(orders):
     position = -1
     index = 0
-    month = input("enter month with 3 letters eg Nov with first letter as a capital")
+    month = input("enter month with 3 letters eg Nov with first letter as a capital ")
     while position == -1 and index<len(orders):
-        if orders[index].date[3:5] == month and orders[index].rating == 5:
+        if orders[index].date[3:6] == month and orders[index].rating == 5:
             position = index
+        index = index + 1
     return position
+
+def writedetails(orders, position):
+    with open ("winners.txt", "w") as wfile:
+        if position >0:
+            wfile.write (orders[position].orderNum + "," + orders[position].email + "," + orders[position].cost + "\n")
+        else:
+            print("no winner")
+
+def countoption(orders,option):
+    counter = 0
+    for i in range (len (orders)):
+        if orders[i].option == option:
+            counter+=1
+    return counter
+
+def display(orders):
+    delivered = countoption(orders,"Delivery")
+    collected = countoption(orders, "Collection")
+    print(delivered, "orders were delivered")
+    print(collected, "orders were collected")
+        
 #main program
 orders = readfromfile()
+
 position = findpos(orders)
-print(position)
-#writedetails(orders, position)
-#display(orders)
+writedetails(orders, position)
+display(orders)
