@@ -29,32 +29,50 @@
 			<h1>Complete the form to submit your own review </h1>
 			<p>Just played a game and can't wait to talk about it? We'd love to hear it!
 			Complete the form below and we'll check it out!</p>
-
-			
-Enter your First name*<br>
- <input type="text" name="name" maxlength="15" required>
 <br></br>
-<span class = "right">
+<table >
+	<tr>
+		<td>
+Enter your First name*<br>
+
+ <input type="text" name="name" maxlength="15" required>
+</td>
+<td>
  Enter your Last name*<br>
   <input type="text" name="name" maxlength="15" required >
-  </span>
-<br></br>
+  </td>
+  </tr>
+<td>
 Enter your age* 
 <br>
   <input type="radio" name="age" checked>16-18<br>
   <input type="radio" name="age" >19-24<br>
   <input type="radio" name="age" >25-29<br>
   <input type="radio" name="age" >30+<br>
-  
-  	<span class = "right">Rating*<br>
-  <input type="number" name="rating" min="0" max = "10" required>
-		</span>
-
-  Genre name *<br>
+</td>
+<tr>
+<td>
+    Genre name *<br>
   <input type="text" name="name" maxlength="20" required>
-  <br></br>
+</td>
+<td>
+  Rating* <br>
+  <input type="number" name="rating" min="0" max = "10" required>
+  </td>
+</tr>
+<td>
     Your detailed review:*<br>
   <textarea name="review" rows="4" cols="50" required></textarea>
+</td>
+
+
+
+<br>
+
+	</table>
+  <input type="submit" value="Submit" class = "left">
+  <br>
+  
     <br></br>
 
 
